@@ -1,0 +1,94 @@
+.result-block {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border: 2px solid #7ea69a;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 9999;
+    font-size: 16px;
+}
+
+.result-header {
+    background-color: #7ea69a;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+}
+
+.result-close {
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    color: #000000;
+}
+
+.result-close:hover {
+    color: #ff0000;
+}
+
+.result-content {
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.loading-text {
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.loading-dots {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 20px;
+}
+
+.loading-dots div {
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.loading-dots div:nth-child(1) {
+    left: 6px;
+    animation: loading-dots-animation 1.2s infinite;
+}
+
+.loading-dots div:nth-child(2) {
+    left: 6px;
+    animation: loading-dots-animation 1.2s infinite;
+}
+
+.loading-dots div:nth-child(3) {
+    left: 26px;
+    animation: loading-dots-animation 1.2s infinite;
+}
+
+.loading-dots div:nth-child(4) {
+    left: 45px;
+    animation: loading-dots-animation 1.2s infinite;
+}
+
+@keyframes loading-dots-animation {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}

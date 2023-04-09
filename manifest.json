@@ -1,0 +1,23 @@
+{
+  "name": "ChatGPT-Chrome-Extension",
+  "description": "This extension helps in code review by providing code suggestions through ChatGPT API",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "logo.png"
+  },
+  "permissions": ["tabs", "storage", "activeTab", "contextMenus", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ]
+}
